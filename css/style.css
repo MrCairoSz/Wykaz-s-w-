@@ -1,0 +1,217 @@
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --primacyColor: rgba(8, 8, 20, 0.582);
+    --secondaryColor: rgba(255,255,255,0.9);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    background-image: url(../img/owl-one.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: 40% 80%;
+
+}
+
+/* styling main header*/
+.header-page {
+    color: var(--secondaryColor);
+    padding: 5rem 5rem;
+    text-align: center;
+}
+
+.header-page h1 {
+    font-size: 5rem;
+}
+
+.header-page p {
+    font-size: 2rem;
+}
+
+/*styling main*/
+.main-page {
+    width: 70%;
+    background-color: var(--primacyColor);
+    margin: 0 auto;
+    box-shadow: 0 0 1rem 0.2rem rgb(0, 139, 139);
+}
+
+.section-title {
+    color: var(--secondaryColor);
+    text-align: center;
+    padding: 2rem 2rem;
+    position: relative;
+    font-size: 2rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 1px;
+    width: 10rem;
+    background-color: rgb(46, 45, 45);
+    box-shadow: 0 0 0.7rem 0.1rem rgb(0, 139, 139);
+}
+
+.paragraph {
+    padding: 3.5rem 3rem;
+    font-size: 1.3rem;
+    color: rgba(190, 184, 184, 0.9);
+}
+
+.image-section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.image-section-header {
+    background-color: rgba(8, 8, 20, 0.7);
+    padding: 1.5rem 2rem 4rem;
+}
+
+.image-figcaption {
+    background-color: rgba(8, 8, 20, 0.7);
+    color: rgba(190, 184, 184, 0.9);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.text-section {
+    padding: 4rem 0;
+}
+
+.paragraph.describe {
+    text-align: center;
+}
+
+.page-footer {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: var(--secondaryColor);
+}
+
+.icon-footer {
+    font-size: 3rem;
+    
+}
+
+.page-footer p {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.icon {
+    margin-left: 1rem;
+    transition: transform 0.1s linear; 
+}
+
+.icon:hover {
+    cursor: pointer;
+    transform:scale(1.1);
+}
+
+@media(min-width: 576px) {
+    :root {
+        font-size: 75%;
+    }
+}
+
+@media(min-width: 768px) {
+    .container {
+        background-position: 34% 80%;
+    }
+
+    .icon-footer {
+        font-size: 4.5rem;
+        
+    }
+    
+    .page-footer p {
+        padding-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media(min-width: 992px) {
+    .container {
+        background-position: 20% 80%;
+    }
+
+    .paragraph.art {
+        padding: 4rem 3rem;
+    }
+
+   .text-section {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+   }
+   
+   .flex-container {
+    width: 50%;
+   }
+
+   .paragraph {
+    padding: 0.5rem 0.5rem;
+   }
+
+   .flex-container.one {
+       order: 1;
+   }
+
+   .flex-container.two {
+    order: 2;
+    }
+    .flex-container.three {
+        order: 4;
+    }
+    .flex-container.four {
+        order: 3;
+    }
+    .flex-container.five {
+        order: 5;
+    }
+    .flex-container.six {
+        order: 6;
+    }
+}
+
+@media(min-width: 1120px) {
+    :root {
+        font-size: 81.25%;
+    }
+
+    .container {
+        background-position: 0% 77%;
+    }
+    
+    .paragraph.art {
+        padding: 4.5rem 4rem;
+    }
+    .paragraph {
+        padding: 0.5rem 1.5rem;
+       }
+}
